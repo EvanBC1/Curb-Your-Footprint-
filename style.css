@@ -1,18 +1,21 @@
 /* ENTIRE PAGE */
 
 .bg-img {
-    /* The image used */
+    /* Background Image */
     background-image: url("img/carbon-chimney.jpg");
-  
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
     min-height: 653px;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   
     /* Needed to position the navbar */
     position: relative;
+  }
+    /* Gray rectangle for white text overlay */
+  .grayshape {
+    position: fixed;
+    bottom: 12em;
+    right: 25em;
   }
   
   /* Navbar container inside the image */
