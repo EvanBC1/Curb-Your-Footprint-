@@ -20,21 +20,32 @@ function calculateTravelEmissions () {
       ['train', 600],
       ['subway', 400]
     ];
-  var airCarbon = .40124132;
-  var busCarbon = .130072735;
-  var railCarbon = .357148865;
-  var subwayCarbon = .264555;
+  var airCarbonPerMile = .40124132;
+  var busCarbonPerMile = .130072735;
+  var railCarbonPermile = .357148865;
+  var subwayCarbonPerMile = .264555;
+  var totalCarbon = 0;
   for (var i = 0; i < testArray.length; i++) {
+    var carbonEmitted = 0;
     if (testArray[i][0] === 'air') {
-      console.log(Math.round(testArray[i][1] * airCarbon));
+      carbonEmitted = Math.round(testArray[i][1] * airCarbonPerMile);
+      console.log(`${carbonEmitted} pound of carbon emitted.`);
+      totalCarbon += carbonEmitted;
     } else if (testArray[i][0] === 'bus') {
-      console.log(Math.round(testArray[i][1] * busCarbon));
+      carbonEmitted = Math.round(testArray[i][1] * busCarbonPerMile);
+      console.log(`${carbonEmitted} pound of carbon emitted.`);
+      totalCarbon += carbonEmitted;
     } else if (testArray[i][0] === 'train') {
-      console.log(Math.round(testArray[i][1] * railCarbon));
+      carbonEmitted = Math.round(testArray[i][1] * railCarbonPermile);
+      console.log(`${carbonEmitted} pound of carbon emitted.`);
+      totalCarbon += carbonEmitted;
     }else if (testArray[i][0] === 'subway') {
-      console.log(Math.round(testArray[i][1] * subwayCarbon));
+      carbonEmitted = Math.round(testArray[i][1] * subwayCarbonPerMile);
+      console.log(`${carbonEmitted} pound of carbon emitted.`);
+      totalCarbon += carbonEmitted;
     }
   }
+  console.log(`${totalCarbon} total pounds of carbon emitted.`);
 }
 calculateTravelEmissions ();
 calculateCarEmissions();
