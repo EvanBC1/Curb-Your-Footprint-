@@ -10,5 +10,31 @@ function calculateCarEmissions () {
   var co2PerGallon = 19.6;
   var lbsOfCo2 = 0;
   lbsOfCo2 = milesDriven / mpg * co2PerGallon;
-  console.log(lbsOfCo2);
+  console.log(Math.round(lbsOfCo2));
 }
+
+function calculateTravelEmissions () {
+  var testArray =
+    [['air', 1000],
+      ['bus', 800],
+      ['train', 600],
+      ['subway', 400]
+    ];
+  var airCarbon = .40124132;
+  var busCarbon = .130072735;
+  var railCarbon = .357148865;
+  var subwayCarbon = .264555;
+  for (var i = 0; i < testArray.length; i++) {
+    if (testArray[i][0] === 'air') {
+      console.log(Math.round(testArray[i][1] * airCarbon));
+    } else if (testArray[i][0] === 'bus') {
+      console.log(Math.round(testArray[i][1] * busCarbon));
+    } else if (testArray[i][0] === 'train') {
+      console.log(Math.round(testArray[i][1] * railCarbon));
+    }else if (testArray[i][0] === 'subway') {
+      console.log(Math.round(testArray[i][1] * subwayCarbon));
+    }
+  }
+}
+calculateTravelEmissions ();
+calculateCarEmissions();
