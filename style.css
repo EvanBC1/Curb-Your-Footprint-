@@ -2,7 +2,7 @@
 
 .bg-img {
     /* Background Image */
-    background-image: url("img/carbon-chimney.jpg");
+    background-image: url("img/background.jpg");
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position: center center; 
@@ -11,11 +11,30 @@
     /* Needed to position the navbar */
     position: relative;
   }
+
+  h1 {
+        color: #96a0d6;
+        margin: 0;
+        padding: 20px;
+        font-size: 10em;
+        width: 11em;
+        position: fixed;
+  }
     /* Gray rectangle for white text overlay */
-  .grayshape {
+  /* .grayshape {
     position: fixed;
     bottom: 12em;
     right: 25em;
+  } */
+
+    /* Centered Text */
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   
   /* Navbar container inside the image */
@@ -34,7 +53,7 @@
   /* Navbar links */
   .topnav a {
     float: right;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
