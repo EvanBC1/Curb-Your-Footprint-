@@ -1,0 +1,36 @@
+/* ENTIRE PAGE */
+
+body {
+    font-family: Helvitca, sans-serif;
+    background-color: #444
+}
+
+/* FOOTER */
+
+/* footer {
+    height: 100px;
+    background: #444;
+} */
+
+nav {
+    width: 960px;
+    margin: 0px auto;
+}
+
+/* footer img {
+    float: left;
+    margin-top: 15px;
+    margin-right: 30px;
+} */
+
+footer li {
+    display: inline-block;
+    margin-right: 60px;
+    margin-top: 45px;
+}
+
+a {
+    color: rgb(204, 196, 196);
+    text-decoration: none;
+    
+}
