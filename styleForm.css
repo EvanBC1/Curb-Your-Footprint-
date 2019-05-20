@@ -1,12 +1,14 @@
 body{
-    background-image: url("img/form-image.jpg");
+    background-image: url("img/marvin-meyer-1601892-unsplash.jpg") no-repeat center center fixed; 
+    webkit
     width: 960px;
-    margin: 0px, auto;
+    height: 100%;
 }
 #informationForm{
     /* width: 960px; */
-    border: solid 1em;
+    border: solid .54em;
     margin: auto;
+    background-image: url("img/form-image.jpg")
 }
 legend{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
