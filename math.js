@@ -1,16 +1,24 @@
 'use strict';
 
+//Global variables
+var airCarbonPerMile = .40124132;
+var busCarbonPerMile = .130072735;
+var railCarbonPermile = .357148865;
+var subwayCarbonPerMile = .264555;
+var co2PerGallon = 19.6;
+var totalCarbon = 0;
+var mpg = 25;
+var milesDriven = 10000;
+var percentMilesReplacedByBus = .5;
+var carbonReleasedByDriving = 0;
 
 function calculateCarEmissions () {
   // Car emit: 19.6 pound per gallon of gas
   // Miles driven per year / MPG * 19.6
   // Example 10,000 / 30 * 19.6 = 6,533.33 lbs of CO2 per year
-  var mpg = 30;
-  var milesDriven = 10000;
-  var co2PerGallon = 19.6;
-  var lbsOfCo2 = 0;
-  lbsOfCo2 = milesDriven / mpg * co2PerGallon;
-  console.log(Math.round(lbsOfCo2));
+  carbonReleasedByDriving = Math.round(milesDriven / mpg * co2PerGallon);
+  console.log(`${carbonReleasedByDriving} pounds of carbon produced by driving`);
+  
 }
 
 function calculateTravelEmissions () {
@@ -20,11 +28,6 @@ function calculateTravelEmissions () {
       ['train', 600],
       ['subway', 400]
     ];
-  var airCarbonPerMile = .40124132;
-  var busCarbonPerMile = .130072735;
-  var railCarbonPermile = .357148865;
-  var subwayCarbonPerMile = .264555;
-  var totalCarbon = 0;
   for (var i = 0; i < testArray.length; i++) {
     var carbonEmitted = 0;
     if (testArray[i][0] === 'air') {
@@ -47,5 +50,14 @@ function calculateTravelEmissions () {
   }
   console.log(`${totalCarbon} total pounds of carbon emitted.`);
 }
-calculateTravelEmissions ();
+
+function recommendations (carbonReleasedByDriving) {
+  var busEfficiency = busCarbonPerMile / (co2PerGallon / mpg); 
+  var carbonSaved = Math.round((carbonReleasedByDriving * percentMilesReplacedByBus) - ((carbonReleasedByDriving * percentMilesReplacedByBus) * busEfficiency)) ;
+  console.log(`Driving a bus emmits only ${Math.round(busEfficiency * 100)}% of the carbon per mile that your car does. By bussing 50% of your miles driven than you could prevent ${carbonSaved} lbs of CO2 from being emmited anually.`); 
+}
+
+
 calculateCarEmissions();
+calculateTravelEmissions ();
+recommendations(carbonReleasedByDriving);
