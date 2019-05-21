@@ -1,26 +1,33 @@
-/* ENTIRE PAGE */
-
 /* BACKGROUND IMAGE */
 
-    html { 
-      background: url(img/carbon-chimney.jpg) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
+html { 
+  background: url(img/carbon-chimney.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+h1 {
+  color: #f0af72;
+  margin: 0;
+  padding: 20px;
+  font-size: 10em;
+  width: 11em;
+  position: fixed;
+}
 
 
   /* About Us Pictures */
 
-  section img {
-    float: left;
-    margin-right: 30px;
-    margin-bottom: 20px;
+section img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
 }
 
 section div {
-    width: calc(50% - 30px);
+  width: calc(50% - 30px);
 }
 
 /* MAIN SUB-BANNER */
@@ -32,54 +39,43 @@ main {
 
 main li {
   float: left;
-  margin: 100px 100px 100px 0px;
+  margin: 100px 100px 100px 30px;
 }
 
 main li:last-child {
   margin-right: 0px;
 }
 
-
-
-  h1 {
-        color: #f0af72;
-        margin: 0;
-        padding: 20px;
-        font-size: 10em;
-        width: 11em;
-        position: fixed;
-  }
-
-      /* Centered Text */
-      .centered {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #ffffff;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      }
+/* Centered Text */
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
       
-      /* Navbar container inside the image */
-      .container {
-        overflow: hidden;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      }
+/* Navbar container inside the image */
+.container {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
       
-      /* Navbar */
-      .topnav {
-        overflow: hidden;
-      }
+/* Navbar */
+.topnav {
+  overflow: hidden;
+}
       
-      /* Navbar links */
-      .topnav a {
-        float: right;
-        color: #ffffff;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
+/* Navbar links */
+.topnav a {
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
     
