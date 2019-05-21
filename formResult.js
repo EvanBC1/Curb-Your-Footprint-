@@ -1,4 +1,4 @@
-'use strict';
+
 
 
 //calling form from HTML
