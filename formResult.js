@@ -1,3 +1,5 @@
+/* eslint-disable strict */
+/* eslint-disable indent */
 'user strict';
 
 
