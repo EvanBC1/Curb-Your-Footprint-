@@ -30,3 +30,26 @@ var myChart = new Chart(ctx, {
     }
   }
 });
+
+//Testing local storage
+//constructor
+var userInputArray = [];
+var air = 1000;
+var bus = 800;
+var train = 600;
+var subway = 400;
+
+var instance = new User (1000, 800, 600, 400);
+
+function User(air, bus, train, subway) {
+  this.airCarbonPermile = air;
+  this.busCarbonPermile = bus;
+  this.railCarbonPerMile = train;
+  this.subwayCarbonPerMile = subway;
+  userInputArray.push(this);
+  console.log(userInputArray);
+}
+
+var testArray = ['cat', 'hat', 'bat'];
+localStorage.test = JSON.stringify(userInputArray);
+console.log('This is what is in local storage', localStorage.test);
