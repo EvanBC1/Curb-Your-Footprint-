@@ -6,19 +6,23 @@ body{
 #informationForm{
     /* width: 960px; */
     border: solid .54em;
-    margin: auto;
+    margin: 3em;
     border-radius: 1em;
 }
 legend{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2em;
+    padding: .50em;
 }
 label car{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 3em;
     color: white;
+    padding: 2em;
+    padding-left: 2em;
 }
 #formTable{
     border-color: solid .54em
+    
 }
 
