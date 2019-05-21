@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 
 //calling form from HTML
@@ -22,7 +22,7 @@ function User (air, bus, train, subway) {
 };
 
 //stores test array of carbon emitted
-this.testArrayForm = [];
+this.userInputArray= [];
 this.totalCarbonForm = [];
 
 //populatuing carbon array
@@ -37,7 +37,7 @@ function renderHeaderRow(){
     thEl.textContent = 'air';
     trEl.appenChild(thEl);
 }
-    
+//submit button 
 
 //event handler
 function handleInformationForm (event){
@@ -56,17 +56,18 @@ formTable.innerHTML = '';
 
 
 function renderList (){
-    for ( var i = 0; i < testArrayForm.length; i++){
+    for ( var i = 0; i < userInputArray.length; i++){
         var liEl = document.createElement('li');
-        liEl.textContent = `${testArrayForm[i].value} string here ${testArrayForm[i].views} string here ${testArrayForm[i].value} string here `;
+        liEl.textContent = `${userInputArray[i].value} string here ${userInputArray[i].views} string here ${userInputArray[i].value} string here `;
         carbonList.appendChild(liEl);
     }
-  
 }
+    renderList();
+
 
 //event validator
 if(!event.target.says.value || !event.target.who.value){
-    return alert('Fields cannot be empty!');
+  alert('Fields cannot be empty!');
 };
 
 //new instances 
@@ -75,4 +76,7 @@ if(!event.target.says.value || !event.target.who.value){
 
 
 //event listener
-informationForm.addEventListener('submit', infoForm);
+submitInfo.addEventListener('click', handleSubmitClick);
+function handleSubmitClick(){
+  console.log('hello');
+}
