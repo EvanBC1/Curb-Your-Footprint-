@@ -1,10 +1,15 @@
 'user strict';
 
 
-//calling form
+//calling form from HTML
 var infoForm = document.getElementById('informationForm');
+//calling table from HTML
 var tableResult = document.getElementById('formTable');
-new User = [];
+
+var testArrayForm = [];
+var totalCarbonForm = [];
+var newUser = [];
+
 
 //constructor 
 function User (air, bus, train, subway) {
@@ -12,6 +17,16 @@ function User (air, bus, train, subway) {
     this.busCarbonPermile = bus;
     this.railCarbonPerMile = train;
     this.subwayCarbonPerMile = subway;
+}
+
+//stores test array of carbon emitted
+this.testArrayForm = [];
+this.totalCarbonForm = [];
+
+//populatuing carbon array
+newUser.push(this)
+
+
 
 //functions
 function renderHeaderRow(){
@@ -19,25 +34,21 @@ function renderHeaderRow(){
     var thEl = document.createElement('th');
     thEl.textContent = 'air';
     trEl.appenChild(thEl);
+    
+
+
+
+
+
+
 }
 
+// //chart
+
+// //array that holds data
+// var testArrayForm = [];
+// var totalCarbonForm = [];
+// var chartDrawn;
+// var carbonData;
 
 
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-    
