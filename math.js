@@ -21,12 +21,14 @@ function calculateCarEmissions () {
 }
 
 function calculateTravelEmissions () {
-  var testArray =
+  var testArray = 
     [['air', 1000],
       ['bus', 800],
       ['train', 600],
       ['subway', 400]
     ];
+  console.log('Test Array', testArray);
+  console.log('test from LS', testFromLS);
   for (var i = 0; i < testArray.length; i++) {
     var carbonEmitted = 0;
     if (testArray[i][0] === 'air') {
@@ -56,6 +58,19 @@ function recommendations (carbonReleasedByDriving) {
   console.log(`Driving a bus emmits only ${Math.round(busEfficiency * 100)}% of the carbon per mile that your car does. By bussing 50% of your miles driven than you could prevent ${carbonSaved} lbs of CO2 from being emmited anually.`); 
 }
 
+
+
+
+//Local storage test
+console.log('This is also in local storage', localStorage.test);
+
+if(localStorage.test) {
+  var testFromLS = JSON.parse(localStorage.test);
+  console.log('getting name',testFromLS[0]);
+  new User(testFromLS);
+  
+  
+}
 
 calculateCarEmissions();
 calculateTravelEmissions ();
