@@ -1,34 +1,28 @@
-
+'use strict'
 
 
 //calling form from HTML
-var submitInfo = document.getElementById('submitInfo');
+
 //calling table from HTML
 var tableResult = document.getElementById('formTable');
-//calling 
+//calling
 var resultList = document.getElementById('carbon-emission');
-
+var submitInfo = document.getElementById('submitInfo');
 
 var totalCarbonForm = [];
-var allData = [];
+var userInputArray = [];
+
 
 
 
 //constructor
-function User (air, bus, train, subway) {
+function User(air, bus, train, subway) {
   this.airCarbonPermile = air;
   this.busCarbonPermile = bus;
   this.railCarbonPerMile = train;
   this.subwayCarbonPerMile = subway;
+  userInputArray.push(this);
 }
-
-//stores test array of carbon emitted
-this.userInputArray= [];
-
-
-//populatuing carbon array
-allData.push(this);
-
 
 
 //functions
@@ -43,14 +37,7 @@ renderHeaderRow();
 
 
 //event handler
-function handleInformationForm (event){
-  event.preventDefault();
-}
 
-// var newAir = event.target.air.value;
-// var newBus = event.target.busWay.value;
-// var newTrain = event.target.railWay.value;
-// var newSubway = event.target.subWay.value;
 
 
 // new User (newAir, newBus, newTrain, newSubway);
@@ -75,15 +62,24 @@ renderList();
 //   alert('Fields cannot be empty!');
 // }
 
-//new instances 
+//new instances
 
 
 
 
 //event listener
-window.onload = function(){
-  submitInfo.addEventListener('click', handleSubmitClick);
-};
-function handleSubmitClick(){
+submitInfo.addEventListener('click', handleSubmitClick);
+
+
+function handleSubmitClick(event){
+  event.preventDefault();
+  var newAir = event.target.air.value;
+  var newBus = event.target.busWay.value;
+  var newTrain = event.target.railWay.value;
+  var newSubway = event.target.subWay.value;
+ 
+  var tableData = new User (newAir, newBus, newTrain, newSubway);
+  console.log(tableData);
+  
   console.log('hello');
 }
