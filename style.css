@@ -1,58 +1,32 @@
-/* ENTIRE PAGE */
+/* Background Image */
 
-/* .bg-img {
-    /* Background Image 
-    background-image: url("img/background.jpg");
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center; 
-    min-height: 50em; */
-
-    html { 
-      background: url(img/background.jpg) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
+html { 
+  background: url(img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
   
-    h1 {
-      color: #96a0d6;
-      margin: 0;
-      padding: 20px;
-      font-size: 10em;
-      width: 11em;
-      position: fixed;
+h1 {
+  color: #96a0d6;
+  margin: 0;
+  padding: 20px;
+  font-size: 10em;
+  width: 11em;
+  position: fixed;
 }
 
-
-    /* Gray rectangle for white text overlay */
-  /* .grayshape {
-    position: fixed;
-    bottom: 12em;
-    right: 25em;
-  } */
-
-    /* Centered Text */
-  .centered {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
+/* Centered Text */
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
     
-  /* div.button {
-    padding: 10px 30px;
-    background: #000;
-    color: #fff;
-    border-radius: 3px;
-    font-size: 20px;
-    transition: 350ms;
-    position: fixed
-} */
-
 button{
   height:35px; 
   width:150px; 
@@ -73,29 +47,29 @@ button {
 }
 
 button:hover {
-    background: #5b6edb;
+  background: #5b6edb;
 }
 
-  /* Navbar container inside the image */
-  .container {
-    overflow: hidden;
+/* Navbar container inside the image */
+.container {
+  overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
-  }
+}
   
-  /* Navbar */
-  .topnav {
-    overflow: hidden;
-  }
+/* Navbar */
+.topnav {
+  overflow: hidden;
+}
   
-  /* Navbar links */
-  .topnav a {
-    float: right;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+/* Navbar links */
+.topnav a {
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
   
