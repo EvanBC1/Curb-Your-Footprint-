@@ -2,7 +2,7 @@
 
 
 //calling form from HTML
-var infoForm = document.getElementById('informationForm');
+var infoForm = document.getElementById('infoForm');
 //calling table from HTML
 var tableResult = document.getElementById('formTable');
 
@@ -34,21 +34,25 @@ function renderHeaderRow(){
     var thEl = document.createElement('th');
     thEl.textContent = 'air';
     trEl.appenChild(thEl);
+}
     
 
-
-
-
-
-
+//event handler
+function handleInformationForm (event){
+    event.preventDefault();
 }
+var newAir = event.target.air.value;
+var newBus = event.target.busWay.value;
+var newTrain = event.target.railWay.value;
+var newSubway = even.target.subWay.value;
 
-// //chart
+new User (newAir, newBus, newTrain, newSubway);
 
-// //array that holds data
-// var testArrayForm = [];
-// var totalCarbonForm = [];
-// var chartDrawn;
-// var carbonData;
+overAllTotal = 0;
+
+formTable.innerHTML = '';
 
 
+
+//event listener
+informationForm.addEventListener('submit', infoForm);
