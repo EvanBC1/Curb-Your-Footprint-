@@ -30,7 +30,6 @@ this.userInputArray= [];
 allData.push(this);
 
 
-
 //functions
 function renderHeaderRow(){
   var trEl = document.createElement('tr');
@@ -70,10 +69,6 @@ function renderList (){
 renderList();
 
 
-//event validator
-// if(!event.target.says.value || !event.target.who.value){
-//   alert('Fields cannot be empty!');
-// }
 
 //new instances 
 
