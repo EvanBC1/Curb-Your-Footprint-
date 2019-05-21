@@ -1,25 +1,31 @@
 /* ENTIRE PAGE */
 
-.bg-img {
-    /* Background Image */
+/* .bg-img {
+    /* Background Image 
     background-image: url("img/background.jpg");
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position: center center; 
-    min-height: 50em;
-  
-    /* Needed to position the navbar */
-    position: relative;
-  }
+    min-height: 50em; */
 
-  h1 {
-        color: #96a0d6;
-        margin: 0;
-        padding: 20px;
-        font-size: 10em;
-        width: 11em;
-        position: fixed;
-  }
+    html { 
+      background: url(img/background.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  
+    h1 {
+      color: #96a0d6;
+      margin: 0;
+      padding: 20px;
+      font-size: 10em;
+      width: 11em;
+      position: fixed;
+}
+
+
     /* Gray rectangle for white text overlay */
   /* .grayshape {
     position: fixed;
@@ -36,7 +42,40 @@
     color: #ffffff;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
-  
+    
+  /* div.button {
+    padding: 10px 30px;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 20px;
+    transition: 350ms;
+    position: fixed
+} */
+
+button{
+  height:35px; 
+  width:150px; 
+  margin: -20px -50px; 
+  position:relative;
+  top:50%; 
+  left:50%;
+  padding: 5px 15px;
+  background: #96a0d6;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 20px;
+  transition: 350ms;
+}
+
+button {
+  text-align: center
+}
+
+button:hover {
+    background: #5b6edb;
+}
+
   /* Navbar container inside the image */
   .container {
     overflow: hidden;
