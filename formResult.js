@@ -5,10 +5,12 @@
 var infoForm = document.getElementById('infoForm');
 //calling table from HTML
 var tableResult = document.getElementById('formTable');
+var carbonList = document.getElementById('carbon-emission')
 
 var testArrayForm = [];
 var totalCarbonForm = [];
 var newUser = [];
+
 
 
 //constructor 
@@ -17,7 +19,7 @@ function User (air, bus, train, subway) {
     this.busCarbonPermile = bus;
     this.railCarbonPerMile = train;
     this.subwayCarbonPerMile = subway;
-}
+};
 
 //stores test array of carbon emitted
 this.testArrayForm = [];
@@ -51,6 +53,24 @@ new User (newAir, newBus, newTrain, newSubway);
 overAllTotal = 0;
 
 formTable.innerHTML = '';
+
+
+function renderList (){
+    for ( var i = 0; i < testArrayForm.length; i++){
+        var liEl = document.createElement('li');
+        liEl.textContent = `${testArrayForm[i].value} string here ${testArrayForm[i].views} string here ${testArrayForm[i].value} string here `;
+        carbonList.appendChild(liEl);
+    }
+  
+}
+
+//event validator
+if(!event.target.says.value || !event.target.who.value){
+    return alert('Fields cannot be empty!');
+};
+
+//new instances 
+
 
 
 
