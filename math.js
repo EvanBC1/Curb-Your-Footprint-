@@ -18,7 +18,6 @@ function calculateCarEmissions () {
   // Example 10,000 / 30 * 19.6 = 6,533.33 lbs of CO2 per year
   carbonReleasedByDriving = Math.round(milesDriven / carMpg * co2PerGallon);
   console.log(`${carbonReleasedByDriving} pounds of carbon produced by driving`);
-  
 }
 
 function calculateTravelEmissions () {
