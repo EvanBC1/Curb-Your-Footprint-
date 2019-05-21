@@ -6,7 +6,7 @@
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position: center center; 
-    min-height: 653px;
+    min-height: 50em;
   
     /* Needed to position the navbar */
     position: relative;
