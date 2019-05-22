@@ -79,6 +79,10 @@ var averageKWH = 11764;
 var solarSystem = 5;
 var CarbonReleasedFromElectricity = 0;
 var solarProduction = 0;
+var carbonProducedByAir = 0;
+var carbonProducedByBus = 0;
+var carbonProducedByRail = 0;
+var carbonProducedBySubway = 0; 
 
 function calculateCarEmissions (retrievedData) {
   carbonReleasedByDriving = Math.round(retrievedData.milesDriven / retrievedData.mpg * co2PerGallon);
@@ -98,10 +102,10 @@ function calculateHousingEmissions (retrievedData) {
 }
 
 function calculateTravelEmissions (retrievedData) {
-  var carbonProducedByAir = Math.round(retrievedData.airMiles * airCarbonPerMile);
-  var carbonProducedByBus = Math.round(retrievedData.busMiles * busCarbonPerMile);
-  var carbonProducedByRail = Math.round(retrievedData.railMiles * railCarbonPerMile);
-  var carbonProducedBySubway = Math.round(retrievedData.subwayMiles * subwayCarbonPerMile);
+  carbonProducedByAir = Math.round(retrievedData.airMiles * airCarbonPerMile);
+  carbonProducedByBus = Math.round(retrievedData.busMiles * busCarbonPerMile);
+  carbonProducedByRail = Math.round(retrievedData.railMiles * railCarbonPerMile);
+  carbonProducedBySubway = Math.round(retrievedData.subwayMiles * subwayCarbonPerMile);
   console.log(`${carbonProducedByAir} pounds of carbon released by flying`);
   console.log(`${carbonProducedByBus} pounds of carbon released by riding on the bus`);
   console.log(`${carbonProducedByRail} pounds of carbon released by riding the train`);
@@ -124,54 +128,57 @@ function recommendations (retrievedData) {
   console.log(`Or if you rode a bike for those mile you would reduce your carbon emissions by ${carbonSavedBiking} pounds per year`);
   console.log(`If you replaced 10 incandecent bulbs with LED bulbs you could reduce your carbon footprint by ${carbonSavedWithLeds} pounds a year`);
   console.log(`If you made all these changes you could reduce your footprint by ${percentSaved}% down to ${totalCarbon - totalCarbonSaved} pounds!`);
+  drawFootprint ();
 }
 
 /////////// Drawing Charts ///////////
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['CO2 Footprint in pounds of CO2 released'],
-    datasets: [
-      {
-        label: 'Commuting by Car',
-        data: [6000],
-        backgroundColor: '#D6E9C6',
-      },
-      {
-        label: 'Air Travel',
-        data: [4000],
-        backgroundColor: '#5DADE2',
-      },
-      {
-        label: 'Bus Travel',
-        data: [4000],
-        backgroundColor: '#815DE2',
-      },
-      {
-        label: 'Rail Travel',
-        data: [4000],
-        backgroundColor: '#C35DE2',
-      },
-      {
-        label: 'Subway Travel',
-        data: [4000],
-        backgroundColor: '#E25DBF',
-      },
-      {
-        label: 'Housing',
-        data: [2000],
-        backgroundColor: '#EBCCD1',
-      }
-    ]
-  },
-  options: {
-    scales: {
-      xAxes: [{ stacked: true}],
-      yAxes: [{ stacked: true}]
-    }
-  }
-});
 
+function drawFootprint () {
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['CO2 Footprint in pounds of CO2 released'],
+      datasets: [
+        {
+          label: 'Commuting by Car',
+          data: [carbonReleasedByDriving],
+          backgroundColor: '#D6E9C6',
+        },
+        {
+          label: 'Air Travel',
+          data: [carbonProducedByAir],
+          backgroundColor: '#5DADE2',
+        },
+        {
+          label: 'Bus Travel',
+          data: [carbonProducedByBus],
+          backgroundColor: '#815DE2',
+        },
+        {
+          label: 'Rail Travel',
+          data: [carbonProducedByRail],
+          backgroundColor: '#C35DE2',
+        },
+        {
+          label: 'Subway Travel',
+          data: [carbonProducedBySubway],
+          backgroundColor: '#E25DBF',
+        },
+        {
+          label: 'Housing',
+          data: [CarbonReleasedFromElectricity],
+          backgroundColor: '#EBCCD1',
+        }
+      ],
+    },
+    options: {
+      scales: {
+        xAxes: [{ stacked: true,}],
+        yAxes: [{ stacked: true,}],
+      },
+    },
+  });
+}
 //event listener
 allInformationForm.addEventListener('submit', handleSubmitClick);
