@@ -17,6 +17,7 @@ var allInformationForm = document.getElementById('informationForm');
 var travel = ['airTravel', 'busTravel', 'trainTravel', 'subwayTravel'];
 
 localStorage.clear();
+
 //constructor
 function User(mileage, mpg, air, bus, train, subway){
   this.airCarbonPerMile = air;
@@ -27,6 +28,7 @@ function User(mileage, mpg, air, bus, train, subway){
   this.mpg = mpg;
   this.milesDriven = mileage;
 }
+
 
 //event handler
 function handleSubmitClick(event){
@@ -52,6 +54,7 @@ function renderUserArray (){
   }
 }
 renderUserArray();
+
 
 //event listener
 allInformationForm.addEventListener('submit', handleSubmitClick);
