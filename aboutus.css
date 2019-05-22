@@ -10,11 +10,11 @@ html {
 
 h1 {
   color: #f0af72;
-  margin: 0;
-  padding: 20px;
-  font-size: 10em;
+  padding: 10px;
+  font-size: 7em;
   width: 11em;
-  position: fixed;
+  position: top;
+  font-family: sans-serif
 }
 
 
@@ -39,7 +39,7 @@ main {
 
 main li {
   float: left;
-  margin: 100px 100px 100px 30px;
+  margin: 40px 100px 100px 30px;
 }
 
 main li:last-child {
@@ -77,5 +77,6 @@ main li:last-child {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: sans-serif
 }
     

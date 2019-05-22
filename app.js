@@ -53,3 +53,4 @@ function User(air, bus, train, subway) {
 var testArray = ['cat', 'hat', 'bat'];
 localStorage.test = JSON.stringify(userInputArray);
 console.log('This is what is in local storage', localStorage.test);
+
