@@ -66,26 +66,67 @@
                         <li label for="railWay">Railway</label></li>
                         <input name = "railWay" type="text" size="5" placeholder=""/>  
                         <li label for="subWay">Subway</label></li>
+
                         <input name = "subWay" type="text" size="5" placeholder=""/>
                       </ul>
                     </div>
 
-                    
+
+                        <input name = "subWay" type="text" size="5" placeholder="" />
+
+                    </ul>
+                
                     <button type="submit">Submit</button>
                     <button id = "clear">Clear</button>
                   
-
                 <div id='form-info'></div>
                 
-                        
-
                 </fieldset>
 
     <table id="formTable"></table>
 
+    <!-- Chart Stuff -->
+                
+    <div class="myChartDiv">
+      <canvas id="myChart" width="400px" Height="400px"></canvas>
+    </div>
 
+    <!-- Power Plant Stuff -->
+    <div class="powerPlant">
+        <img id="powerPlant" src="img/Smoke stack.png" alt='powerPlant clip art'/>
+  
+    </div>  
+    <!-- Credit to Andrea Verlicchi -->
+    <div id="smoke"> 
+          <span class="s0"></span>
+          <span class="s1"></span>
+          <span class="s2"></span>
+          <span class="s3"></span>
+          <span class="s4"></span>
+          <span class="s5"></span>
+          <span class="s6"></span>
+          <span class="s7"></span>
+          <span class="s8"></span>
+          <span class="s9"></span>
+        </div>  
+        <div id="smoke1"> 
+          <span class="s10"></span>
+          <span class="s11"></span>
+          <span class="s12"></span>
+          <span class="s13"></span>
+          <span class="s14"></span>
+          <span class="s15"></span>
+          <span class="s16"></span>
+          <span class="s17"></span>
+          <span class="s18"></span>
+          <span class="s19"></span>
+        </div>  
+      <div class="myChartDiv">
+        <canvas id="myChart" width="400px" Height="400px"></canvas>
+      </div>
 
     <footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>  
       <script src="formResult.js"></script>
       
     </footer>
