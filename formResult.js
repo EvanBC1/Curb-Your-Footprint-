@@ -54,3 +54,6 @@ function handleSubmitClick(event){
 }
 //event listener
 allInformationForm.addEventListener('submit', handleSubmitClick);
+
+
+//form
