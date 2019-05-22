@@ -1,7 +1,7 @@
 /* Background Image */
 
 html { 
-  background: url(img/background.jpg) no-repeat center center fixed; 
+  background: url(img/main.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,10 +9,10 @@ html {
 }
   
 h1 {
-  color: #96a0d6;
+  color: #f0e2e2;
   margin: 0;
   padding: 20px;
-  font-size: 10em;
+  font-size: 9em;
   width: 11em;
   position: fixed;
   font-family: sans-serif

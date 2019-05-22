@@ -1,7 +1,7 @@
 /* BACKGROUND IMAGE */
 
 html { 
-    background: url(img/carbon-chimney.jpg) no-repeat center center fixed; 
+    background: url(img/pollution.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,7 +9,7 @@ html {
    }
   
   h1 {
-    color: #f0af72;
+    color: #e26a1b;
     padding: 10px;
     font-size: 7em;
     width: 11em;
