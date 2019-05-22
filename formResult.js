@@ -28,16 +28,15 @@ function User(mileage, mpg, air, bus, train, subway){
   this.milesDriven = mileage;
 }
 
+//storing data
+function createLocalStorage(){
+  var stringifieduserInputArray = JSON.stringify(userInputArray);
+  //passing stringified data into storage and giving it the key to access to my storage
+  localStorage.setItem('createLocalStorage', stringifieduserInputArray);
+  console.log(localStorage.setItem);
+}
 
-  //ul list result for car (mileage, and miles per gallon)
-//   function renderUnorderedList(){
-//     var ulEl = document.createElement('ul');
-//     var liEl = document.createElement('li');
-//     ulEl.textContent = 'air';
-//     liEl.appendChild(ulEl);
-//   }
-// }
-// renderUnorderedList();
+createLocalStorage();
 
 //event handler
 function handleSubmitClick(event){
