@@ -31,12 +31,17 @@ function User(mileage, mpg, air, bus, train, subway){
 //storing data
 function createLocalStorage(){
   localStorage.setItem('createLocalStorage', userInputArray);
-  console.log(localStorage.setItem);
+  console.log(userInputArray);
 }
-// function checkingLocalStorage (){
-//   var 
-// }
-createLocalStorage();
+function renderUserArray (){
+  for ( var i = 0; i < userInputArray.length; i++){
+    var liEl = document.createElement('li');
+    liEl.textContent = `${userInputArray[i].name} was viewed ${userInputArray[i].views} times and receieved ${userInputArray[i].votes} of votes `;
+    tableResult.appendChild(liEl);
+  }
+  createLocalStorage();
+}
+renderUserArray();
 
 //event handler
 function handleSubmitClick(event){
@@ -54,5 +59,3 @@ function handleSubmitClick(event){
 //event listener
 allInformationForm.addEventListener('submit', handleSubmitClick);
 
-
-//form
