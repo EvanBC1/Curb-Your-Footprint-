@@ -48,6 +48,14 @@
                     <label for="state">State</label>
                     <input name = "stateInfo" type="text" size="15" placeholder="state" />
                     <input name = "stateInfo" type="text" size="15" placeholder="kw per year" /> -->
+
+                    
+                    <label for="car">Car </label>
+                    <label for="mileage">Miles Driven Annually</label>
+                    <input name = "mileage" type="text" size="15" placeholder="mileage" required/>
+                    <label for="mpg">Miles Per Gallon</label>
+                    <input name = "mpg" type="text" size="15" placeholder="mileage per Gal" />
+
                     <div class="car">
                       <label for="car">Car </label>
                       <label for="mileage">Miles Driven Annually</label>
@@ -55,6 +63,7 @@
                       <label for="mpg">Miles Per Gallon</label>
                       <input name = "mpg" type="text" size="15" placeholder="mileage per Gal" required/>
                     </div>
+
 
                     <div class="my-list">
                       <ul>
@@ -83,7 +92,11 @@
                 
                 </fieldset>
 
-    <table id="formTable"></table>
+                <!-- Results -->
+
+                <h1>Your Carbon Footprint</h1>
+    
+                <ul id="displayResults"></ul>
 
     <!-- Chart Stuff -->
                 
@@ -96,6 +109,7 @@
         <img id="powerPlant" src="img/Smoke stack.png" alt='powerPlant clip art'/>
   
     </div>  
+
     <!-- Credit to Andrea Verlicchi -->
     <div id="smoke"> 
           <span class="s0"></span>
@@ -131,11 +145,8 @@
       
     </footer>
     
-
-
     </body>
-    
-    
+        
 </html>
 
 
