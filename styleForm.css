@@ -1,44 +1,195 @@
 body{
-    background-image: url("img/marvin-meyer-1601892-unsplash.jpg"); 
-    width: 960px;
-    height: 100%;
+    background-image: url('img/formNewBG.jpeg');
 }
+
 #informationForm{
-    /* width: 960px; */
-    border: solid .54em;
+    width: 960px; 
+    /* border: solid .54em white; */
     margin: 3em;
     border-radius: 1em;
 }
 legend{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2em;
     padding: .50em;
+    color: white;
+    /* font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    /* widows: 356px; */
+    overflow: visible;
+    z-index: 20; */
 }
-label {
+/* label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1em;
-    color: black;
+    color:whitesmoke;
     padding: 1em;
     padding-left: 2em;
-}
-#formTable{
-    border-color: solid .54em
-}
+} */
+/* #formTable{
+    border-color: solid .54em;
+} */
 ul{
     margin-left: 1em;
     padding: 2em;
     list-style-type: disc;
+    color: white;
 }
-button {
+button{
     margin-left: 2em;
     margin-bottom:  2em;
+    color: white;
+
 }
-#clear{
+.clear{
     margin-left: 2em;
     margin-bottom: 2em;
+    float: right;
 }
 .form-info{
     list-style-type: disc;
 }
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+		
+body {
+	display:ruby-base-container;
+	flex-direction:column;
+    align-items:center;
+	/* background:gray; */
+	margin-top:5em;
+}		
+svg {
+	/* background-color:oldlace; */
+	margin-bottom:10px;	
+	font-family:Oswald;
+    font-weight:bold;
+}
+/* //resource codepen- globe*/
+#rotating-globe {
+    margin: 40px auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: flat;
+    backface-visibility: hidden;
+  }
+.globe-rail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 300px;  
+}
+.globe-cross-1, .globe-cross-2, .globe-cross-3, .globe-cross-4 {
+position: absolute;
+height: 1px;
+width: 80%;
+background: #ffffff;
+}
+.globe-rail:nth-of-type(2) {
+transform: rotateY(40deg);
+animation: globerail-1 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(3) {
+transform: rotateY(60deg);
+animation: globerail-2 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(4) {
+transform: rotateY(80deg);
+animation: globerail-3 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(5) {
+transform: rotateY(100deg);
+animation: globerail-4 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(6) {
+transform: rotateY(120deg);
+animation: globerail-5 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(7) {
+transform: rotateY(140deg);
+animation: globerail-6 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(8) {
+transform: rotateY(160deg);
+animation: globerail-7 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(9) {
+transform: rotateY(180deg);
+animation: globerail-8 5s infinite;
+animation-timing-function: linear;
+}
+.globe-rail:nth-of-type(10) {
+transform: rotateY(220deg);
+animation: globerail-9 5s infinite;
+animation-timing-function: linear;
+}
+.globe-cross-1 {
+top: 20%;
+left: 10%;
+}
+.globe-cross-2 {
+top: 40%;
+left: 2%;
+width: 98%;
+}
+.globe-cross-3 {
+top: 60%;
+left: 2%;
+width: 98%;
+}
+.globe-cross-4 {
+top: 80%;
+left: 10%;
+}
+@keyframes globerail-1 {
+from {transform: rotateY(40deg)}
+to {transform: rotateY(220deg)}
+}
+@keyframes globerail-2 {
+from {transform: rotateY(60deg)}
+to {transform: rotateY(240deg)}
+}
+@keyframes globerail-3 {
+from {transform: rotateY(80deg)}
+to {transform: rotateY(260deg)}
+}
+@keyframes globerail-4 {
+from {transform: rotateY(100deg)}
+to {transform: rotateY(280deg)}
+}
+@keyframes globerail-5 {
+from {transform: rotateY(120deg)}
+to {transform: rotateY(300deg)}
+}
+@keyframes globerail-6 {
+from {transform: rotateY(140deg)}
+to {transform: rotateY(320deg)}
+}
+@keyframes globerail-7 {
+from {transform: rotateY(160deg)}
+to {transform: rotateY(340deg)}
+}
+@keyframes globerail-8 {
+from {transform: rotateY(180deg)}
+to {transform: rotateY(360deg)}
+}
+@keyframes globerail-9 {
+from {transform: rotateY(200deg)}
+to {transform: rotateY(380deg)}
+}
+
+
+
+
+
 
 

@@ -2,21 +2,46 @@
 <html lang="en">
     <head>
       <title>Form </title>
+      <meta name="globe" content="width-device-width, initial-scale=1.0">
       <link rel="stylesheet" href="reset.css">
       <link rel="stylesheet" href="styleForm.css">
+      
     </head>
     <body>
         <!-- //creating form  -->
          <form id="informationForm">
             <fieldset>
-                <legend>Let's Calculate your Carbon Footprints</legend>
-            
-                    <label for="carTitle">Car </label>
-                    <label for="mileage">Miles Driven Annually</label>
-                    <input name = "mileage" type="text" size="15" placeholder="mileage" />
-                    <label for="mpg">Miles Per Gallon</label>
-                    <input name = "mpg" type="text" size="15" placeholder="mileage per Gal" />
+                <div id='form-animation'>
+                  <legend>Let's Calculate your..</legend>
 
+                  <svg width="100%" max-height="50" viewBox="0 0 2000 100"> 
+                      <defs>  
+                        <clippath id="carbon-footprints">
+                          <text y="100%" font-size="100">
+                            Carbon Footprints
+                            <animate attributeName="x" values="-80%;37%;-1%;100%" dur="10s" repeatCount="indefinite"/>
+                          </text>
+                        </clippath>
+                      </defs>
+                      <image xlink:href="http://www.verve-design.co.uk/wp-content/uploads/2015/09/jaymantri-free-stock-photos-1024x678.jpg" clip-path="url(#carbon-footprints)" width="200%" height="300%" preserveAspectRatio="none" />
+                  </svg>
+                  <div id="rotating-globe">
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-rail"></span>
+                      <span class="globe-cross-1"></span>
+                      <span class="globe-cross-2"></span>
+                      <span class="globe-cross-3"></span>
+                      <span class="globe-cross-4"></span>
+                    </div>
+        
                     <!-- <label for="house">House </label>
                     <label for="houseSqFootage">Square Footage</label>
                     <input name = "houseSqFootage" type="text" size="15" placeholder="Square Footage" />
@@ -39,12 +64,11 @@
 
                     
                     <button type="submit">Submit</button>
-
-                    <ul id="carbon-emission"></ul>
-        
                     <button id = "clear">Clear</button>
+                  
 
                 <div id='form-info'></div>
+                
                         
 
                 </fieldset>
@@ -55,6 +79,7 @@
 
     <footer>
       <script src="formResult.js"></script>
+      
     </footer>
     
 

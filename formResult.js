@@ -17,6 +17,7 @@ var allInformationForm = document.getElementById('informationForm');
 var travel = ['airTravel', 'busTravel', 'trainTravel', 'subwayTravel'];
 
 localStorage.clear();
+
 //constructor
 function User(mileage, mpg, air, bus, train, subway){
   this.airMiles = air;
@@ -27,6 +28,7 @@ function User(mileage, mpg, air, bus, train, subway){
   this.milesDriven = mileage;
   userInputArray.push(this);
 }
+
 
 //event handler
 function handleSubmitClick(event){
@@ -52,6 +54,7 @@ function renderUserArray (){
   }
 }
 renderUserArray();
+
 
 ///////////Form math///////////
 
@@ -83,6 +86,7 @@ function calculateCarEmissions (retrievedData) {
   totalCarbon += carbonReleasedByDriving;
   calculateHousingEmissions(retrievedData);
 }
+
 
 function calculateHousingEmissions (retrievedData) {
   CarbonReleasedFromElectricity = Math.round(averageKWH * carbonPerKWH);
