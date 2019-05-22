@@ -1,0 +1,110 @@
+body {
+  width: 960px;
+  margin: auto;
+  background: #18d0f0;
+}
+
+/* Chart */
+.myChartDiv {
+  margin-left: 660px;
+  margin-top:400px;
+  position: absolute;
+  max-width: 300px;
+  max-height: 400px;
+}
+
+/* Power plant */
+#powerPlant {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 700px;
+  width: 100px;
+}
+
+
+/* Smoke container */
+
+#smoke {
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 160px;
+  left: 50%; bottom: 30px;
+} 
+#smoke1 {
+  position: absolute;
+  z-index: 3;
+  width: 1px; height: 160px;
+  left: 50%; bottom: 30px;
+}
+
+/* smoke balls */
+
+#smoke span { 
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:256px; margin-bottom: 440px;
+	height: 0px; width: 0px;
+	border: 30px solid #4b4b4b;
+	border-radius: 30px;
+	left: -14px; opacity: 0;
+  transform: scale(0.2);
+  z-index: -1;
+}
+#smoke1 span { 
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:289px; margin-bottom: 440px;
+	height: 0px; width: 0px;
+	border: 30px solid #4b4b4b;
+	border-radius: 30px;
+	left: -14px; opacity: 0;
+  transform: scale(0.2);
+  z-index: -1;
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(40px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(80px, -130px) }
+}
+
+@keyframes smokeL1 {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(40px, -130px) }
+}
+
+@keyframes smokeR1 {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(80px, -130px) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
+#smoke1 .s10 { animation: smokeL1 10s 0s infinite }
+#smoke1 .s11 { animation: smokeR1 10s 1s infinite }
+#smoke1 .s12 { animation: smokeL1 10s 2s infinite }
+#smoke1 .s13 { animation: smokeR1 10s 3s infinite }
+#smoke1 .s14 { animation: smokeL1 10s 4s infinite }
+#smoke1 .s15 { animation: smokeR1 10s 5s infinite }
+#smoke1 .s16 { animation: smokeL1 10s 6s infinite }
+#smoke1 .s17 { animation: smokeR1 10s 7s infinite }
+#smoke1 .s18 { animation: smokeL1 10s 8s infinite }
+#smoke1 .s19 { animation: smokeR1 10s 9s infinite }
