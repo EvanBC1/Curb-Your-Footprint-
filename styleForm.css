@@ -29,8 +29,16 @@ ul{
     padding: 2em;
     list-style-type: disc;
 }
+button {
+    margin-left: 2em;
+    margin-bottom:  2em;
+}
 #clear{
-    margin-left: 
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+.form-info{
+    list-style-type: disc;
 }
 
 

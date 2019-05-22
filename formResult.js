@@ -16,7 +16,7 @@ var allInformationForm = document.getElementById('informationForm');
 //objects
 var travel = ['airTravel', 'busTravel', 'trainTravel', 'subwayTravel'];
 
-
+localStorage.clear();
 //constructor
 function User(mileage, mpg, air, bus, train, subway){
   this.airCarbonPerMile = air;
@@ -27,21 +27,6 @@ function User(mileage, mpg, air, bus, train, subway){
   this.mpg = mpg;
   this.milesDriven = mileage;
 }
-
-//storing data
-function createLocalStorage(){
-  localStorage.setItem('createLocalStorage', userInputArray);
-  console.log(userInputArray);
-}
-function renderUserArray (){
-  for ( var i = 0; i < userInputArray.length; i++){
-    var liEl = document.createElement('li');
-    liEl.textContent = `${userInputArray[i].name} was viewed ${userInputArray[i].views} times and receieved ${userInputArray[i].votes} of votes `;
-    tableResult.appendChild(liEl);
-  }
-  createLocalStorage();
-}
-renderUserArray();
 
 //event handler
 function handleSubmitClick(event){
@@ -55,7 +40,19 @@ function handleSubmitClick(event){
 
   var tableData = new User (newMileage, newMpg, newAir, newBus, newTrain, newSubway);
   console.log(tableData);
+  localStorage.setItem('userDataOne',JSON.stringify(tableData));
+  console.log('this is whats in ls',localStorage);
 }
+
+function renderUserArray (){
+  for ( var i = 0; i < userInputArray.length; i++){
+    var liEl = document.createElement('li');
+    liEl.textContent = `${userInputArray[i].event} was viewed ${userInputArray[i].event} times and receieved ${userInputArray[i].event} of votes `;
+    liEl.appendChild(liEl);
+  }
+}
+renderUserArray();
+
 //event listener
 allInformationForm.addEventListener('submit', handleSubmitClick);
 
