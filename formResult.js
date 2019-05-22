@@ -56,7 +56,7 @@ function renderUserArray (){
 renderUserArray();
 
 
-///////////Form math///////////
+///////////Form Math///////////
 
 //take data from local storage
 function retrieveDataFromLS () {
@@ -125,6 +125,53 @@ function recommendations (retrievedData) {
   console.log(`If you replaced 10 incandecent bulbs with LED bulbs you could reduce your carbon footprint by ${carbonSavedWithLeds} pounds a year`);
   console.log(`If you made all these changes you could reduce your footprint by ${percentSaved}% down to ${totalCarbon - totalCarbonSaved} pounds!`);
 }
+
+/////////// Drawing Charts ///////////
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['CO2 Footprint in pounds of CO2 released'],
+    datasets: [
+      {
+        label: 'Commuting by Car',
+        data: [6000],
+        backgroundColor: '#D6E9C6',
+      },
+      {
+        label: 'Air Travel',
+        data: [4000],
+        backgroundColor: '#5DADE2',
+      },
+      {
+        label: 'Bus Travel',
+        data: [4000],
+        backgroundColor: '#815DE2',
+      },
+      {
+        label: 'Rail Travel',
+        data: [4000],
+        backgroundColor: '#C35DE2',
+      },
+      {
+        label: 'Subway Travel',
+        data: [4000],
+        backgroundColor: '#E25DBF',
+      },
+      {
+        label: 'Housing',
+        data: [2000],
+        backgroundColor: '#EBCCD1',
+      }
+    ]
+  },
+  options: {
+    scales: {
+      xAxes: [{ stacked: true}],
+      yAxes: [{ stacked: true}]
+    }
+  }
+});
 
 //event listener
 allInformationForm.addEventListener('submit', handleSubmitClick);
