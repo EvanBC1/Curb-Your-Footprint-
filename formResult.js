@@ -30,12 +30,12 @@ function User(mileage, mpg, air, bus, train, subway){
 
 //storing data
 function createLocalStorage(){
-  var stringifieduserInputArray = JSON.stringify(userInputArray);
-  //passing stringified data into storage and giving it the key to access to my storage
-  localStorage.setItem('createLocalStorage', stringifieduserInputArray);
+  localStorage.setItem('createLocalStorage', userInputArray);
   console.log(localStorage.setItem);
 }
-
+// function checkingLocalStorage (){
+//   var 
+// }
 createLocalStorage();
 
 //event handler
