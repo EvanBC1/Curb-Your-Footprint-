@@ -1,42 +1,50 @@
-body{
-    background-image: url('img/formNewBG.jpeg');
-}
-
-#informationForm{
-    width: 960px; 
-    /* border: solid .54em white; */
-    margin: 3em;
-    border-radius: 1em;
+html{
+    background: url('img/formNewBG.jpeg')no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width:960px;
+    margin: auto;
 }
 legend{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    color: #ffffff;
+    padding-top: .5em;
+}
+.car{
     font-size: 2em;
     padding: .50em;
     color: white;
-    /* font-family: Georgia, 'Times New Roman', Times, serif;
-    position: relative;
-    /* widows: 356px; */
     overflow: visible;
-    z-index: 20; */
-}
-label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1em;
-    color:whitesmoke;
+    font-size: 1.5em;
+    padding: 1.5em;
+    /* padding-left: 2em; */
+}
+.my-list{
+    font-size: 2em;
+    padding: .50em;
+    color: white;
+    overflow: visible;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
     padding: 1em;
     padding-left: 2em;
+    display: inline-block;
 }
-/* #formTable{
-    border-color: solid .54em;
-} */
-ul{
-    margin-left: 1em;
-    padding: 2em;
-    list-style-type: disc;
-    color: white;
+ul li{ 
+    padding-left: 1em;
+    display: inline;
 }
+
 button{
     margin-left: 2em;
     margin-bottom:  2em;
+    display:table-row;
+    background-color: rgb(8, 119, 23);
+    color: white;
 
 }
 .clear{
@@ -47,14 +55,16 @@ button{
 .form-info{
     list-style-type: disc;
 }
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
-		
+#my-list li label{
+    display: table;
+}
+.carbon-footprints{
+    height: 7em;
+    padding-bottom: 3em;
+}		
 body {
 	display:ruby-base-container;
 	flex-direction:column;
-    align-items:center;
-	/* background:gray; */
-	margin-top:5em;
 }		
 svg {
 	/* background-color:oldlace; */
@@ -66,10 +76,11 @@ svg {
 #rotating-globe {
     margin: 40px auto;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 30em;
+    height: 30em;
     transform-style: flat;
     backface-visibility: hidden;
+    margin-left: 14em;
   }
 .globe-rail {
     position: absolute;
@@ -79,6 +90,7 @@ svg {
     height: 100%;
     border: 1px solid #ffffff;
     border-radius: 300px;  
+    
 }
 .globe-cross-1, .globe-cross-2, .globe-cross-3, .globe-cross-4 {
 position: absolute;
