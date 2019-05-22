@@ -9,7 +9,7 @@ html {
  }
 
 h1 {
-  color: #a7acda;
+  color: #99a0da;
   padding: 10px;
   font-size: 7em;
   width: 11em;
@@ -17,34 +17,41 @@ h1 {
   font-family: sans-serif
 }
 
+table {
+  color: #ffffff
+  
+}
 
   /* About Us Pictures */
 
+  main {
+    width: 201px;
+    /* margin: 0px auto; */
+  }
+  
+  main li {
+    /* float: right; */
+    margin: 50px 50px 40px 40px;
+    position: auto;
+  }
+
 section img {
-  float: left;
+  float: right;
   margin-right: 30px;
   margin-bottom: 20px;
 }
 
-section div {
+/* section div {
   width: calc(50% - 30px);
-}
+} */
 
 /* MAIN SUB-BANNER */
 
-main {
-  width: 960px;
-  margin: 30px auto;
-}
 
-main li {
-  float: left;
-  margin: 40px 100px 100px 30px;
-}
 
-main li:last-child {
-  margin-right: 0px;
-}
+/* main li:last-child {
+  margin-right: 30px;
+} */
 
 /* Centered Text */
 .centered {
@@ -63,7 +70,7 @@ main li:last-child {
   bottom: 0;
   width: 100%;
 }
-      
+
 /* Navbar */
 .topnav {
   overflow: hidden;
