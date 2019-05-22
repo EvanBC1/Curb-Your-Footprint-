@@ -123,7 +123,7 @@ function recommendations (retrievedData) {
   console.log(`Taking the bus emmits only ${Math.round(busEfficiency * 100)}% of the carbon per mile that your car does. By bussing 50% of your miles driven than you could prevent ${carbonSavedBusing} lbs of CO2 from being emmited anually.`);
   console.log(`Or if you rode a bike for those mile you would reduce your carbon emissions by ${carbonSavedBiking} pounds per year`);
   console.log(`If you replaced 10 incandecent bulbs with LED bulbs you could reduce your carbon footprint by ${carbonSavedWithLeds} pounds a year`);
-  console.log(`If you made all these changes you could reduce your footprint by ${percentSaved}% down to ${totalCarbon - totalCarbonSaved} pounds!`); 
+  console.log(`If you made all these changes you could reduce your footprint by ${percentSaved}% down to ${totalCarbon - totalCarbonSaved} pounds!`);
 }
 
 //event listener
