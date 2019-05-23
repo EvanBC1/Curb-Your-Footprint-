@@ -205,6 +205,12 @@ to {transform: rotateY(360deg)}
 from {transform: rotateY(200deg)}
 to {transform: rotateY(380deg)}
 }
+a{
+    color: white;
+    font-size: 3em;
+    padding-bottom: 3em;
+    float: right;
+}
 
 
 

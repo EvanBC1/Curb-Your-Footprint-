@@ -23,24 +23,91 @@ h1 {
     padding-left: 4em;
     padding-right: 4em;
     font-size: 1.5em;
-    color: white;
-    font-weight: bold;
+    color:black;
+    font-weight: bolder;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   #paula #text{
-    margin-top: 3.5em;
+    margin-top: 6em;
+    color:white;
   }
   #paula #name{
-    margin-left: 3em;
-    padding-bottom: -2em; 
-    margin-top: 3em;
+    margin-left: 2em;
+    margin-top: 2em;    
+    font-size: 2em;
+    font-weight: bolder;
   }
   img{
     width:300px;
     height:300px;
     float: left;
-    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: .5em;
+    width: 300px;
+    margin-right: .5em;
+    margin-top: .5em;
+  }
+  #evan p{
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.5em;
+    color:black;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #evan #text{
+    margin-top: 6em;
+    color:white;
+  }
+  #evan #name{
+    margin-left: 2em;
+    margin-top: 2em;    
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  img{
+    width:300px;
+    height:300px;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: .5em;
+    width: 300px;
+    margin-right: .5em;
+    margin-top: .5em;
+  }
+  #carey p{
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.5em;
+    color:black;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #carey #text{
+    margin-top: 6em;
+    color:white;
+  }
+  #carey #name{
+    margin-left: 2em;
+    margin-top: 2em;    
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  img{
+    width:300px;
+    height:300px;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: .5em;
+    width: 300px;
+    margin-right: .5em;
+    margin-top: .5em;
   }
 /* table {
   color: white;
