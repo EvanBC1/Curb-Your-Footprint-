@@ -132,8 +132,15 @@ h1 {
     font-size: 20px;
     margin-bottom: 50px;
   }
+  a{
+    font-size: 20px;
+    color: white;
+    margin-left: 900px;
+
+
+  }
   
-/* Centered Text */
+/* Centered Text
 .centered {
   position: fixed;
   top: 50%;
@@ -144,20 +151,20 @@ h1 {
 }
       
 /* Navbar container inside the image */
-.container {
+/* .container {
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
+ */
 /* Navbar */
-.topnav {
+/* .topnav {
   overflow: hidden;
-}
+} */
       
 /* Navbar links */
-.topnav a {
+/* .topnav a {
   float: right;
   color: #ffffff;
   text-align: center;
@@ -166,4 +173,4 @@ h1 {
   font-size: 17px;
   font-family: sans-serif
 }
-    
+     */ 

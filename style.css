@@ -6,16 +6,19 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width:960px;
+  margin: 192px;
 }
   
 h1 {
   color: #f0e2e2;
-  margin: 0;
-  padding: 20px;
+  /* margin: 0; */
+  padding: 3px;
   font-size: 9em;
-  width: 11em;
+  width: 9em;
   position: fixed;
   font-family: sans-serif
+  
 }
 
 /* Centered Text */
@@ -37,7 +40,7 @@ button{
   top:50%; 
   left:50%;
   padding: 5px 15px;
-  background: #96a0d6;
+  background: #0bf2fa;
   color: #fff;
   border-radius: 3px;
   font-size: 20px;
@@ -83,3 +86,20 @@ div.counter {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-family: sans-serif
 }
+a{
+    color: white;
+    font-size: 1.5em;
+    padding-top: 7em;
+    padding-left: 10em;
+    margin-left: 0em;
+    display: inline-flex;
+}
+#counter{
+  font-size: 1.5em;
+  text-shadow: -2px 0 red, 0 1px red, 3px 0 red, 0 -1px red;
+  margin-bottom: 10em;
+  margin-left: -1em;
+  font-weight: bolder;
+  
+}
+
