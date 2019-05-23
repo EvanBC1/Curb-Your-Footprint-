@@ -126,7 +126,7 @@ function recommendations (retrievedData) {
   var carbonSavedWithLeds = Math.round(carbonPerKWH * 37.2 * 10);
   var totalCarbonSaved = carbonSavedSolar + carbonSavedBusing + carbonSavedBiking + carbonSavedWithLeds;
   var percentSaved = Math.round(((totalCarbon - (totalCarbon - totalCarbonSaved)) / totalCarbon) * 100);
-  
+
   resultsArray.push(`This year you will release ${totalCarbon} pounds of carbon. However by following the below recomendations you can reduce your footprint`);
   resultsArray.push(`With solar you could be saving ${carbonSavedSolar} pounds of carbon per year`);
   resultsArray.push(`Taking the bus emmits only ${Math.round(busEfficiency * 100)}% of the carbon per mile that your car does. By bussing 50% of your miles driven than you could prevent ${carbonSavedBusing} lbs of CO2 from being emmited anually.`);
@@ -193,9 +193,30 @@ function drawFootprint () {
       ],
     },
     options: {
+      legend: {
+        labels: {
+          fontColor: 'white',
+          fontSize: 18,
+        },
+      },
       scales: {
-        xAxes: [{ stacked: true,}],
-        yAxes: [{ stacked: true,}],
+        xAxes: [{
+          ticks: {
+            fontColor: 'white',
+            fontSize: 18,
+            beginAtZero: true,
+          },
+          stacked: true,
+        }],
+        yAxes: [{
+          ticks: {
+            fontColor: 'white',
+            fontSize: 14,
+            beginAtZero: true,
+          },
+          stacked: true,
+
+        }],
       },
     },
   });
