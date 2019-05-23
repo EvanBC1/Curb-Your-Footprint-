@@ -116,9 +116,8 @@ a:hover {
 /* smoke balls */
 
 #smoke span { 
-  display: block;
-	position: absolute;
-	bottom: -35px; left: 50%; margin-left:85px; margin-bottom: 214px;
+  position: fixed;
+	bottom: -35px; left: 50%; margin-left:1045px; margin-bottom: 214px;
 	height: 0px; width: 0px;
 	border: 30px solid #ffffff;
 	border-radius: 30px;
@@ -127,9 +126,8 @@ a:hover {
   z-index: -999;
 }
 #smoke1 span { 
-  display: block;
-	position: absolute;
-	bottom: -35px; left: 50%; margin-left:117px; margin-bottom: 214px;
+  position: fixed;
+	bottom: -35px; left: 50%; margin-left:1078px; margin-bottom: 214px;
 	height: 0px; width: 0px;
 	border: 30px solid #ffffff;
 	border-radius: 30px;
