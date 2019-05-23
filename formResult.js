@@ -20,33 +20,32 @@ localStorage.clear();
 var displayResults = document.getElementById('displayResults');
 
 //constructor
-function User(mileage, mpg, air, bus, train, subway, kwhUsed, kwhProduced, Bulbs){
+function User(kwhUsed, kwhProduced, Bulbs,mileage, mpg, air, bus, train, subway){
+  this.kwhUsed = kwhUsed;
+  this.kwhProduced = kwhProduced;
+  this.Bulbs = Bulbs;
+  this.milesDriven = mileage;
+  this.mpg = mpg;
   this.airMiles = air;
   this.busMiles = bus;
   this.railMiles = train;
   this.subwayMiles = subway;
-  this.mpg = mpg;
-  this.milesDriven = mileage;
-  this.kwhUsed = kwhUsed;
-  this.kwhProduced = kwhProduced;
-  this.Bulbs = Bulbs;
-
   userInputArray.push(this);
 }
 
 //event handler
 function handleSubmitClick(event){
   event.preventDefault();
-  var newKwhUsed = parseInt(event.target.mileage.value);
-  var newKwhProduced = parseInt(event.target.mileage.value);
-  var newBulbs = parseInt(event.target.mileage.value);
+  var newKwhUsed = parseInt(event.target.kwhUsed.value);
+  var newKwhProduced = parseInt(event.target.kwhProduced.value);
+  var newBulbs = parseInt(event.target.Bulbs.value);
+  var newMileage = parseInt(event.target.mileage.value);
+  var newMpg = parseInt(event.target.mpg.value);
   var newAir = parseInt(event.target.air.value);
   var newBus = parseInt(event.target.busWay.value);
   var newTrain = parseInt(event.target.railWay.value);
   var newSubway = parseInt(event.target.subWay.value);
-  var newMpg = parseInt(event.target.mpg.value);
-  var newMileage = parseInt(event.target.mileage.value);
-    
+ 
   var tableData = new User (newKwhUsed, newKwhProduced, newBulbs, newMileage, newMpg, newAir, newBus, newTrain, newSubway);
   localStorage.setItem('userDataOne',JSON.stringify(tableData));
   console.log('this is whats in ls',localStorage);
@@ -82,7 +81,6 @@ var totalCarbon = 0;
 var percentMilesReplacedByBus = .5;
 var carbonReleasedByDriving = 0;
 var carbonPerKWH = 1.04;
-var solarSystem = 5;
 var CarbonReleasedFromElectricity = 0;
 var solarProduction = 0;
 var carbonProducedByAir = 0;
@@ -92,17 +90,13 @@ var carbonProducedBySubway = 0;
 
 function calculateCarEmissions (retrievedData) {
   carbonReleasedByDriving = Math.round(retrievedData.milesDriven / retrievedData.mpg * co2PerGallon);
-  console.log(`${carbonReleasedByDriving} pounds of carbon released by driving`);
   totalCarbon += carbonReleasedByDriving;
   calculateHousingEmissions(retrievedData);
 }
 
 function calculateHousingEmissions (retrievedData) {
   CarbonReleasedFromElectricity = Math.round(retrievedData.kwhUsed * 12 * carbonPerKWH);
-  console.log(retrievedData.kwhUsed);
-  console.log(`${CarbonReleasedFromElectricity} pounds of carbon released by your electricity usage`);
-  // KW of system * hours of full sun a day * days in a year
-  solarProduction = solarSystem * 4 * 365;
+  solarProduction = retrievedData.kwhProduced * 4 * 365;
   totalCarbon += CarbonReleasedFromElectricity;
   calculateTravelEmissions(retrievedData);
 }
@@ -112,10 +106,6 @@ function calculateTravelEmissions (retrievedData) {
   carbonProducedByBus = Math.round(retrievedData.busMiles * busCarbonPerMile);
   carbonProducedByRail = Math.round(retrievedData.railMiles * railCarbonPerMile);
   carbonProducedBySubway = Math.round(retrievedData.subwayMiles * subwayCarbonPerMile);
-  resultsArray.push(`${carbonProducedByAir} pounds of carbon released by flying`);
-  resultsArray.push(`${carbonProducedByBus} pounds of carbon released by riding on the bus`);
-  resultsArray.push(`${carbonProducedByRail} pounds of carbon released by riding the train`);
-  resultsArray.push(`${carbonProducedBySubway} pounds of carbon released by riding the subway`);
   totalCarbon += carbonProducedByAir + carbonProducedByBus + carbonProducedByRail + carbonProducedBySubway;
   recommendations(retrievedData);
 }
@@ -124,18 +114,27 @@ function recommendations (retrievedData) {
   var busEfficiency = busCarbonPerMile / (co2PerGallon / retrievedData.mpg);
   var carbonSavedSolar = CarbonReleasedFromElectricity - solarProduction;
   var carbonSavedBusing = Math.round((carbonReleasedByDriving * percentMilesReplacedByBus) - ((carbonReleasedByDriving * percentMilesReplacedByBus) * busEfficiency)) ;
-  var carbonSavedBiking = carbonReleasedByDriving / 2;
-  var carbonSavedWithLeds = Math.round(carbonPerKWH * 37.2 * 10);
+  var carbonSavedBiking = carbonReleasedByDriving / 5;
+  var carbonSavedWithLeds = Math.round(carbonPerKWH * 37.2 * retrievedData.Bulbs);
   var totalCarbonSaved = carbonSavedSolar + carbonSavedBusing + carbonSavedBiking + carbonSavedWithLeds;
   var percentSaved = Math.round(((totalCarbon - (totalCarbon - totalCarbonSaved)) / totalCarbon) * 100);
 
-  resultsArray.push(`This year you will release ${totalCarbon} pounds of carbon. However by following the below recomendations you can reduce your footprint`);
-  resultsArray.push(`With solar you could be saving ${carbonSavedSolar} pounds of carbon per year`);
-  resultsArray.push(`Taking the bus emmits only ${Math.round(busEfficiency * 100)}% of the carbon per mile that your car does. By bussing 50% of your miles driven than you could prevent ${carbonSavedBusing} lbs of CO2 from being emmited anually.`);
-  resultsArray.push(`Or if you rode a bike for those mile you would reduce your carbon emissions by ${carbonSavedBiking} pounds per year`);
-  resultsArray.push(`If you replaced 10 incandecent bulbs with LED bulbs you could reduce your carbon footprint by ${carbonSavedWithLeds} pounds a year`);
+  //Result output
+  resultsArray.push(`This year you will release ${totalCarbon} pounds of carbon. Your breakdown is as follows:`);
+  resultsArray.push(`${CarbonReleasedFromElectricity} pounds of carbon released by your home`);
+  resultsArray.push(`${carbonReleasedByDriving} pounds of carbon released by driving your car`);
+  resultsArray.push(`${carbonProducedByAir} pounds of carbon released by flying`);
+  resultsArray.push(`${carbonProducedByBus} pounds of carbon released by riding on the bus`);
+  resultsArray.push(`${carbonProducedByRail} pounds of carbon released by riding the train`);
+  resultsArray.push(`${carbonProducedBySubway} pounds of carbon released by riding the subway`);
+  
+  //Recomendation
+  resultsArray.push('Fret not as we have some recomendations to lower your foot print listed below:');
+  resultsArray.push(`By adding solar you could be saving ${carbonSavedSolar} pounds of carbon per year`);
+  resultsArray.push(`Taking the bus emmits only ${Math.round(busEfficiency * 100)}% of the carbon per mile that your car does. By busing 50% of your miles driven than you could prevent ${carbonSavedBusing} lbs of CO2 from being emmited anually.`);
+  resultsArray.push(`If in addition to busing you replaced 20% of the miles you drove with biking biking you would reduce your carbon emissions by an additional ${carbonSavedBiking} pounds per year`);
+  resultsArray.push(`If you replaced ${retrievedData.Bulbs} incandecent bulbs with LED bulbs you could reduce your carbon footprint by ${carbonSavedWithLeds} pounds a year`);
   resultsArray.push(`If you made all these changes you could reduce your footprint by ${percentSaved}% down to ${totalCarbon - totalCarbonSaved} pounds!`);
-  console.log(resultsArray[2]);
   drawFootprint ();
   renderResults();
 }
