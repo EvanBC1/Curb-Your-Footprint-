@@ -6,100 +6,181 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+main {
   width:960px;
-  margin: 192px;
+  margin: auto;
 }
   
 h1 {
-  color: #f0e2e2;
-  /* margin: 0; */
-  padding: 3px;
+  color: #a3d5f1;
   font-size: 9em;
   width: 9em;
-  position: fixed;
-  font-family: sans-serif
+  font-family: sans-serif;
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   
 }
 
 /* Centered Text */
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+p {
   color: #ffffff;
+  font-size: 1.4em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: sans-serif
+  font-family: sans-serif;
+  z-index: 1;
 }
     
 button{
   height:35px; 
   width:150px; 
-  margin: -20px -50px; 
-  position:relative;
-  top:50%; 
-  left:50%;
-  padding: 5px 15px;
-  background: #0bf2fa;
+  background: #0bc2fa;
   color: #fff;
   border-radius: 3px;
   font-size: 20px;
-  transition: 350ms;
-}
-
-button {
-  text-align: center
-  font-family: sans-serif
-}
-
-button:hover {
-  background: #5b6edb;
-}
-
-/* Navbar container inside the image */
-.container {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-  
-/* Navbar */
-.topnav {
-  overflow: hidden;
-}
-  
-/* Navbar links */
-.topnav a {
-  float: right;
-  color: #ffffff;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: sans-serif
+  margin-left:410px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  animation:button 5s;
+  -webkit-animation:button 5s infinite;
 }
 
-/*Counter*/
-div.counter {
-  color: #ffffff;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-family: sans-serif
+footer {
+  margin-top: 160px;
 }
+
+nav {
+  margin-left: 75%;
+}
+
 a{
-    color: white;
-    font-size: 1.5em;
-    padding-top: 7em;
-    padding-left: 10em;
-    margin-left: 0em;
-    display: inline-flex;
+  color: white;
+  font-size: 1.5em;
+  margin-top: 200px;
+  margin-left: 20px;
+  text-decoration: none;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  animation:nav 5s;
+  -webkit-animation:nav 5s infinite;
+}
+
+a:hover {
+  color: #66db5b;
+  transition-duration: 1000ms;
 }
 #counter{
-  font-size: 1.5em;
-  text-shadow: -2px 0 red, 0 1px red, 3px 0 red, 0 -1px red;
-  margin-bottom: 10em;
-  margin-left: -1em;
+  margin-top: 50px;
   font-weight: bolder;
+  float: right;
+}
+
+@-webkit-keyframes nav {
+  0% {color:#0bc2fa;}
+  50% {color:#66db5b;}
+  100% {color:#0bc2fa;}
+}
+
+@-webkit-keyframes button {
+  0% {background:#0bc2fa;}
+  50% {background:#66db5b;}
+  100% {background:#0bc2fa;}
+}
+
+/* Power plant */
+#powerPlant {
+  position: fixed;
+  width: 100px;
+  margin-top: 70px;
+  margin-left: 530px;
   
 }
 
+/* Smoke container */
+
+#smoke {
+	position: absolute;
+	z-index: 3;
+	width: 1px; height: 160px;
+  left: 50%; bottom: 30px;
+} 
+#smoke1 {
+  position: absolute;
+  z-index: 3;
+  width: 1px; height: 160px;
+  left: 50%; bottom: 30px;
+}
+
+/* smoke balls */
+
+#smoke span { 
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:85px; margin-bottom: 214px;
+	height: 0px; width: 0px;
+	border: 30px solid #ffffff;
+	border-radius: 30px;
+	left: -14px; opacity: 0;
+  transform: scale(0.2);
+  z-index: -999;
+}
+#smoke1 span { 
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:117px; margin-bottom: 214px;
+	height: 0px; width: 0px;
+	border: 30px solid #ffffff;
+	border-radius: 30px;
+	left: -14px; opacity: 0;
+  transform: scale(0.2);
+  z-index: -1;
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(40px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(80px, -130px) }
+}
+
+@keyframes smokeL1 {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(40px, -130px) }
+}
+
+@keyframes smokeR1 {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(80px, -130px) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
+#smoke1 .s10 { animation: smokeL1 10s 0s infinite }
+#smoke1 .s11 { animation: smokeR1 10s 1s infinite }
+#smoke1 .s12 { animation: smokeL1 10s 2s infinite }
+#smoke1 .s13 { animation: smokeR1 10s 3s infinite }
+#smoke1 .s14 { animation: smokeL1 10s 4s infinite }
+#smoke1 .s15 { animation: smokeR1 10s 5s infinite }
+#smoke1 .s16 { animation: smokeL1 10s 6s infinite }
+#smoke1 .s17 { animation: smokeR1 10s 7s infinite }
+#smoke1 .s18 { animation: smokeL1 10s 8s infinite }
+#smoke1 .s19 { animation: smokeR1 10s 9s infinite }

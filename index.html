@@ -3,30 +3,57 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Are you a dirty individual?</title>
+  <title>Curb Your Footprint</title>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
-  </head>
-
 </head>
-
 <body>
-        <!-- <div class="bg-img"> -->
-        <h1>Curb Your Footprint</h1>
-            <div class="container">                    
-                    <div class="topnav">
-                    <div class="centered">acilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit<br><br><br><br><p><button onclick="window.location.href = 'form.html';">Start Here</button></p></div>
-                    <br><p><div style="color:white;" style="font-family:verdana;" id='counter'></div></p></div>
-                </div>
-              </div>
-
-    <a href="learnmore.html">Learn More</a>
-    <a href="aboutus.html">About Us</a>
-
-              
+  <header>
+      <h1>Curb Your Footprint</h1>
+  </header>
+  <main>
+      <p>Hello and welcome to Curb Your Footprint! This site is designed to show the impact we make on the world around us. As climate change worsens it is vital to know what our personal impact is and what we can do to reduce it. To find out what your carbon footprint is press the button below.</p> 
+      <button onclick="window.location.href = 'form.html';">Start Here</button>
+      <p id='counter'></p>
+      <!-- Power plant -->
+      <div class="powerPlant">
+          <img id="powerPlant" src="img/Smoke stack.png" alt='powerPlant clip art'/>
+      </div>  
+      <!-- Credit to Andrea Verlicchi for smoke idea-->
+      <div id="smoke"> 
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+          </div>  
+          <div id="smoke1"> 
+              <span class="s10"></span>
+              <span class="s11"></span>
+              <span class="s12"></span>
+              <span class="s13"></span>
+              <span class="s14"></span>
+              <span class="s15"></span>
+              <span class="s16"></span>
+              <span class="s17"></span>
+              <span class="s18"></span>
+              <span class="s19"></span>
+            </div>  
+      
+      
+  </main>
+  <footer>  
+    <nav>
+      <a href="learnmore.html">Learn More</a>       <a href="aboutus.html">About Us</a>  
+    </nav>
     <script src='app.js'></script>
     <script src='math.js'></script>
     <script id="counter" src='counter.js'></script>
+  </footer>        
 </body>
 </html>
