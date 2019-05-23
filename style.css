@@ -74,7 +74,7 @@ a:hover {
 #counter{
   margin-top: 50px;
   font-weight: bolder;
-  float: right;
+  text-align: center;
 }
 
 @-webkit-keyframes nav {
