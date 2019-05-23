@@ -9,25 +9,47 @@ html {
  }
 
 h1 {
-  color: #99a0da;
-  padding: 10px;
+  color: #886401;
+  padding: .5em;
   font-size: 7em;
   width: 11em;
   position: top;
   font-family: sans-serif
 }
 
-
   /* About Us Pictures */
-table {
+
+#paula p{
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #paula #text{
+    margin-top: 3.5em;
+  }
+  #paula #name{
+    margin-left: 3em;
+    padding-bottom: -2em; 
+    margin-top: 3em;
+  }
+  img{
+    width:300px;
+    height:300px;
+    float: left;
+    padding: 2em;
+  }
+/* table {
   color: white;
   width: 55%;
   margin: auto;
   text-align: center;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
 }
-
+ */
 
 /* Centered Text */
 .centered {
