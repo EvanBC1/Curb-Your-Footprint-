@@ -6,6 +6,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width:960px;
+  margin: auto;
  }
 
 h1 {
@@ -19,105 +21,118 @@ h1 {
 
   /* About Us Pictures */
 
-#paula p{
-    padding-left: 4em;
-    padding-right: 4em;
-    font-size: 1.5em;
+#paula{
+    padding-left: 5px;
+    padding-right: 4px;
+    font-size: 20px;
     color:black;
     font-weight: bolder;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+#paula #name{
+    margin-left: 250px;
+    margin-top: 8px;    
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+#paulaImg{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width:150px;
+    height:150px;
+    padding: 4px;
+    margin-right: 5px;
+    margin-top: -px;
+    margin-bottom: 2px;
+    margin-left: 30px;
+    position: absolute;
   }
   #paula #text{
-    margin-top: 6em;
+    margin-top: 40px;
+    margin-left: 230px;
     color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    float: right;
   }
-  #paula #name{
-    margin-left: 2em;
-    margin-top: 2em;    
-    font-size: 2em;
-    font-weight: bolder;
-  }
-  img{
-    width:300px;
-    height:300px;
-    float: left;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: .5em;
-    width: 300px;
-    margin-right: .5em;
-    margin-top: .5em;
-  }
-  #evan p{
-    padding-left: 4em;
-    padding-right: 4em;
+  #evan{
+    padding-left: 6px;
+    padding-right: 6px;
     font-size: 1.5em;
     color:black;
     font-weight: bolder;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  #evan #text{
-    margin-top: 6em;
-    color:white;
   }
   #evan #name{
-    margin-left: 2em;
-    margin-top: 2em;    
-    font-size: 2em;
+    margin-left: 250px;
+    margin-top: 250px;    
+    font-size: 25px;
     font-weight: bolder;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   }
-  img{
-    width:300px;
-    height:300px;
-    float: left;
+  #evanImg {
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: .5em;
-    width: 300px;
-    margin-right: .5em;
-    margin-top: .5em;
+    width:150px;
+    height:150px;
+    padding: 4px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-left: 30px;
+    position: absolute;
+    float: left;
   }
-  #carey p{
-    padding-left: 4em;
-    padding-right: 4em;
+  #evan #text{
+    margin-top: 40px;
+    margin-left: 150px;
+    color:white;
+    margin-left: 230px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 20px;
+  }
+  #carey{
+    padding-left: 6px;
+    padding-right: 6px;
     font-size: 1.5em;
     color:black;
     font-weight: bolder;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-  #carey #text{
-    margin-top: 6em;
-    color:white;
-  }
   #carey #name{
-    margin-left: 2em;
-    margin-top: 2em;    
-    font-size: 2em;
-    font-weight: bolder;
-  }
-  img{
-    width:300px;
-    height:300px;
-    float: left;
+      margin-left: 250px;
+      margin-top: 250px;    
+      font-size: 25px;
+      font-weight: bolder;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+  #careyImg{
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: .5em;
-    width: 300px;
-    margin-right: .5em;
-    margin-top: .5em;
+    width:150px;
+    height:150px;
+    padding: 4px;
+    margin-right: 5px;
+    margin-top: 8px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    position: absolute;
+    float: left;
   }
-/* table {
-  color: white;
-  width: 55%;
-  margin: auto;
-  text-align: center;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
- */
-
+  #carey #text{
+    margin-top: 55px;
+    margin-left: 230px;
+    margin-bottom: 50px;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    float: right;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  
 /* Centered Text */
 .centered {
   position: fixed;
