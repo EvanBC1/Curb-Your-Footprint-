@@ -13,9 +13,6 @@ var userInputArray = [];
 //global variable for DOM
 var allInformationForm = document.getElementById('informationForm');
 
-//objects
-var travel = ['airTravel', 'busTravel', 'trainTravel', 'subwayTravel'];
-
 //clearing local storage
 localStorage.clear();
 
@@ -23,28 +20,34 @@ localStorage.clear();
 var displayResults = document.getElementById('displayResults');
 
 //constructor
-function User(mileage, mpg, air, bus, train, subway){
+function User(mileage, mpg, air, bus, train, subway, kwhUsed, kwhProduced, Bulbs){
   this.airMiles = air;
   this.busMiles = bus;
   this.railMiles = train;
   this.subwayMiles = subway;
   this.mpg = mpg;
   this.milesDriven = mileage;
+  this.kwhUsed = kwhUsed;
+  this.kwhProduced = kwhProduced;
+  this.Bulbs = Bulbs;
+
   userInputArray.push(this);
 }
-
 
 //event handler
 function handleSubmitClick(event){
   event.preventDefault();
+  var newKwhUsed = parseInt(event.target.mileage.value);
+  var newKwhProduced = parseInt(event.target.mileage.value);
+  var newBulbs = parseInt(event.target.mileage.value);
   var newAir = parseInt(event.target.air.value);
   var newBus = parseInt(event.target.busWay.value);
   var newTrain = parseInt(event.target.railWay.value);
   var newSubway = parseInt(event.target.subWay.value);
   var newMpg = parseInt(event.target.mpg.value);
   var newMileage = parseInt(event.target.mileage.value);
-
-  var tableData = new User (newMileage, newMpg, newAir, newBus, newTrain, newSubway);
+    
+  var tableData = new User (newKwhUsed, newKwhProduced, newBulbs, newMileage, newMpg, newAir, newBus, newTrain, newSubway);
   localStorage.setItem('userDataOne',JSON.stringify(tableData));
   console.log('this is whats in ls',localStorage);
   retrieveDataFromLS();
@@ -79,7 +82,6 @@ var totalCarbon = 0;
 var percentMilesReplacedByBus = .5;
 var carbonReleasedByDriving = 0;
 var carbonPerKWH = 1.04;
-var averageKWH = 11764;
 var solarSystem = 5;
 var CarbonReleasedFromElectricity = 0;
 var solarProduction = 0;
@@ -95,9 +97,9 @@ function calculateCarEmissions (retrievedData) {
   calculateHousingEmissions(retrievedData);
 }
 
-
 function calculateHousingEmissions (retrievedData) {
-  CarbonReleasedFromElectricity = Math.round(averageKWH * carbonPerKWH);
+  CarbonReleasedFromElectricity = Math.round(retrievedData.kwhUsed * 12 * carbonPerKWH);
+  console.log(retrievedData.kwhUsed);
   console.log(`${CarbonReleasedFromElectricity} pounds of carbon released by your electricity usage`);
   // KW of system * hours of full sun a day * days in a year
   solarProduction = solarSystem * 4 * 365;
@@ -149,7 +151,6 @@ function renderResults (){
     ulEL.appendChild(liEl);
   }
 }
-
 
 /////////// Drawing Charts ///////////
 
@@ -222,5 +223,4 @@ function drawFootprint () {
   });
 }
 //event listener
-allInformationForm.addEventListener('submit', handleSubmitClick);
-
+allInformationForm.addEventListener('submit', handleSubmitClick)
