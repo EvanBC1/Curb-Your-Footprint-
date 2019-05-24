@@ -26,10 +26,8 @@ h1{
 legend{
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.5em;
-  color:black;
   padding-top: .5em;
   letter-spacing: 0.1em;
-  background-color: antiquewhite;
 }
 .car{
   font-size: 1.5em;
@@ -54,8 +52,15 @@ legend{
   letter-spacing: 0.1em;
 }
 ul li{ 
-  padding-left: 1em;
-  display: inline;
+  padding-left: 2em;
+  font-stretch: expanded;
+  color:rgb(84, 252, 243);
+  list-style-type: disc;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  font-size: 1.5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 button{
     margin-left: 2em;
@@ -97,10 +102,12 @@ button{
 #my-list li label{
     display: table;
 }
-.carbon-footprints{
-    height: 7em;
+/* .carbon-footprints{
+    height: 9em;
     padding-bottom: 3em;
-}		
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}		 */
 body{
   background-image:  url('img/formNewBG.jpeg')no-repeat center center fixed;
 	display:ruby-base-container;
