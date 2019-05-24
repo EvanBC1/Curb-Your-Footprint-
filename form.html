@@ -17,13 +17,14 @@
                   <svg width="100%" max-height="220" viewBox="0 30 1200 100"> 
                       <defs>  
                         <clippath id="carbon-footprints">
-                          <text y="100%" font-size="100">
+                          <text y="100%" font-size="100" text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                          >
                             Carbon Footprints
                             <animate attributeName="x" values="-80%;37%;-1%;100%" dur="10s" repeatCount="no-repeat"/>
                           </text>
                         </clippath>
                       </defs>
-                      <image xlink:href="http://www.verve-design.co.uk/wp-content/uploads/2015/09/jaymantri-free-stock-photos-1024x678.jpg" clip-path="url(#carbon-footprints)" width="100%" height="600%" preserveAspectRatio="none" />
+                      <image xlink:href="http://www.verve-design.co.uk/wp-content/uploads/2015/09/jaymantri-free-stock-photos-1024x678.jpg" clip-path="url(#carbon-footprints)" width="900%" height="600%" preserveAspectRatio="none" />
                   </svg>
                   
                   <div id="rotating-globe">
@@ -71,49 +72,46 @@
                             <span class="s19"></span>
                           </div>  
                     </div>   -->
-                  <form id="one">
                     <fieldset>
-                      <div class="houseInfo">
-                        <legend>Enter The Information About Your Home Below:</legend>
-                        <label for="houseElectricConsumption">The average American houshold used 980 KWH's of electricity a month. You can calculate your monthly usage <a href="https://www.cpi.coop/my-account/online-usage-calculator/">with this calculator</a></label>
-                        <input name = "kwhUsed" type="number" size="15" placeholder="power used" value="980" />
-                        <label for="kwhSolar">You can calculate how much solar panels could reduce your carbxon footprint here. For an estimation on how much solar  power your house could produce use <a href="https://www.google.com/get/sunroof" font-size="3px">Project Sunroof</a></label>
-                          <input name = "kwhProduced" type="number" size="15" placeholder="Solar KWH" value="5"  />
-                        <label for="incandescent Bulbs">Enter how many incandescent bulbs your house has to calculate how much energy energy efficient bulbs could help your carbon footprint.</label>
-                        <input name = "Bulbs" type="number" size="15" placeholder="# of incandescent bulbs" value="10"  />
-                    </div>
-                  </fieldset>
-                </form>
+                        <legend>Enter The Information About Your Home Below</legend>
+                          <div class="houseInfo">
+                            <label for="houseElectricConsumption">The average American houshold used 980 KWH's of electricity a month. You can calculate your monthly usage <a href="https://www.cpi.coop/my-account/online-usage-calculator/">with this calculator</a></label>
+                            <input name = "kwhUsed" type="number" size="15" placeholder="power used" value="980" />
+                            <label for="kwhSolar">You can calculate how much solar panels could reduce your carbxon footprint here. For an estimation on how much solar  power your house could produce use <a href="https://www.google.com/get/sunroof">Project Sunroof</a></label>
+                              <input name = "kwhProduced" type="number" size="15" placeholder="Solar KWH" value="5"  />
+                            <label for="incandescent Bulbs">Enter how many incandescent bulbs your house has to calculate how much energy energy efficient bulbs could help your carbon footprint.</label>
+                            <input name = "Bulbs" type="number" size="15" placeholder="# of incandescent bulbs" value="10"  />
+                          </div>
+                      </fieldset>
               
-                <form id="two">
                   <fieldset>
-                    <div class="car">
-                      <label for="car">Car:</label>
-
-                      <label for="mileage">Enter how many miles you driv a year</label>
+                    <legend>Car</legend>
+                      <div class="car">
+                        <label for="mileage">Enter how many miles you driv a year</label>
                         <input name = "mileage" type="text" size="15" placeholder="mileage" value="10000" />
-                      <label for="mpg">Enter the mile per gallon your car gets</label>
+                        <label for="mpg">Enter the mile per gallon your car gets</label>
                         <input name = "mpg" type="text" size="15" placeholder="mileage per Gal" value="25" />
-                    </div>
-                    </fieldset>
+                      </div>
+                  </fieldset>
 
-                    <fieldset>
-                    <div class="my-list">
-                        <label for="travel">Calculate Your Travel Carbon Footprint Below:</label>
+                  <fieldset>
+                    <legend>Calculate your Carbon Footprint Below</legend>
+                      <div class="my-list">
                         <label for="airWay">Enter the number of miles you fly a year</label>
-                          <input name = "air" type="text" size="5" placeholder="" value="10000" />
+                        <input name = "air" type="text" size="5" placeholder="" value="10000" />
                         <label for="busWay">Enter the number of miles you ride the bus per year</label>
-                          <input name = "busWay" type="text" size="5" placeholder="" value="4000" />
+                        <input name = "busWay" type="text" size="5" placeholder="" value="4000" />
                         <label for="railWay">Enter the number of miles you ride a train per year</label>
-                          <input name = "railWay" type="text" size="5" placeholder="" value="2000" />  
+                        <input name = "railWay" type="text" size="5" placeholder="" value="2000" />  
                         <label for="subWay">Enter the number of miles you ride the subway per year</label>
-                          <input name = "subWay" type="text" size="5" placeholder="" value="4000" />
+                        <input name = "subWay" type="text" size="5" placeholder="" value="4000" />
                     </div>
                   </fieldset>
+
                     <button type="submit">Submit</button>
                     <button id ="clear">Clear</button>
                   
-                <div id='form-info'></div>
+                    <div id='form-info'></div>
     
                 <!-- Results -->
 
