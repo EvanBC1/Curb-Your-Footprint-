@@ -1,45 +1,61 @@
 html{
     background: url('img/formNewBG.jpeg')no-repeat center center fixed; 
+    /* background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.4; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width:960px;
-    margin: auto;
-}
+    margin: auto; 
+  } 
 h1{
   font-size: 2em;
   color: white;
   padding-top: 2em;
+  letter-spacing: 0.1em;
 }
 legend{
   font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5em;
-    color: #ffffff;
-    padding-top: .5em;
+  font-size: 1.5em;
+  color:black;
+  padding-top: .5em;
+  letter-spacing: 0.1em;
+  background-color: antiquewhite;
 }
 .car{
-    font-size: 1.5em;
-    padding: .50em;
-    color: white;
-    overflow: visible;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 1.5em;
+  font-size: 1.5em;
+  padding: .50em;
+  color:white;
+  overflow: visible;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 1em;
+  background-color: antiquewhite;
+
 }
 .my-list{
   font-size: 1.5em;
   padding: .50em;
-    color: white;
-    overflow: visible;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5em;
-    padding: 1em;
-    padding-left: 2em;
-    display: inline-block;
+  color: white;
+  overflow: visible;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  padding: 1em;
+  padding-left: 2em;
+  display: inline-block;
+  letter-spacing: 0.1em;
 }
 ul li{ 
-    padding-left: 1em;
-    display: inline;
+  padding-left: 1em;
+  display: inline;
 }
 button{
     margin-left: 2em;
@@ -53,20 +69,44 @@ button{
     margin-bottom: 2em;
     float: right;
 }
-/* .form-info{
+.form-info{
     list-style-type: disc;
-} */
-/* #my-list li label{
+} 
+.houseInfo{
+  background-color: rgb(170, 165, 165);
+  padding:1em;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
+.car{
+  background-color: rgb(170, 165, 165);
+  padding:1em;
+  letter-spacing: 0.1em;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
+.my-list{
+  background-color: rgb(170, 165, 165);
+  padding:1em;
+  letter-spacing: 0.1em;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
+#my-list li label{
     display: table;
 }
 .carbon-footprints{
     height: 7em;
     padding-bottom: 3em;
 }		
-body {
+body{
+  background-image:  url('img/formNewBG.jpeg')no-repeat center center fixed;
 	display:ruby-base-container;
-	flex-direction:column; */
-/* }		 */
+  flex-direction:column;
+  color: black;
+}		
 svg {
 	margin-bottom:10px;	
 	font-family:Oswald;
@@ -85,6 +125,10 @@ legend {
   color: white;
   font-size: em;
   font-family: 'Times New Roman', Times, serif;
+  background-color: black;
+  padding: 1em;
+  border-radius: 1em;
+
 }
 
 label{
@@ -220,7 +264,7 @@ to {transform: rotateY(380deg)}
 }
 a {
   color: white;
-  font-size: 3em;
+  font-size: 1em;
   float: right;
 }
 
