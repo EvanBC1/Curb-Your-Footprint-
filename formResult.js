@@ -52,6 +52,10 @@ function handleSubmitClick(event){
   retrieveDataFromLS();
 }
 
+function handleClearClick(){
+  console.log('click');
+}
+
 function renderUserArray (){
   for ( var i = 0; i < userInputArray.length; i++){
     var liEl = document.createElement('li');
@@ -222,4 +226,5 @@ function drawFootprint () {
   });
 }
 //event listener
-allInformationForm.addEventListener('submit', handleSubmitClick)
+allInformationForm.addEventListener('submit', handleSubmitClick);
+allInformationForm.addEventListener('clear', handleClearClick);
